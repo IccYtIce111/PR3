@@ -1,0 +1,116 @@
+/* Общие стили */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Карточки номеров */
+.room-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.room-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+/* Статусы бронирований */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-confirmed {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-checked-in {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-checked-out {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+/* Админ панель */
+.admin-panel .stat-card {
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.admin-panel .stat-card:hover {
+    transform: scale(1.02);
+}
+
+.btn-group-sm .btn {
+    margin: 0 2px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .room-card {
+        margin-bottom: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+}
+
+/* Формы */
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.room-card {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Футер */
+.footer {
+    margin-top: auto;
+}
